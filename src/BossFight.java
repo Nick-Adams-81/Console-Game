@@ -47,17 +47,17 @@ public class BossFight {
                     System.out.println("You attack! your attack deals " + heroAttack + " damage, leaving the monster with " + enemyHealth + ", but the monster dealt " + enemyAttack + " damage,\n leaving you with " + heroHealth + " health");
 
                     // run this if the enemys health is 0 or less
-                    if (enemyHealth <= 0) {
-                        System.out.println("You have defeated the monster!!!!");
-                        MonsterOne.monsterOne();
-                        epilouge(name);
+                    if (heroHealth <= 0) {
+                        System.out.println("You have perished on your quest, a brave effort but all for naught...");
+                        MonsterTwo.monsterTwo();
+                        Main.main(name);
                         break;
 
                         // run this if the heros health is 0 or less
-                    } else if (heroHealth <= 0) {
-                        System.out.println("You have perished on your quest, a brave effort but all for naught...");
-                        MonsterTwo.monsterTwo();
-                        Main.main();
+                    } else if (enemyHealth <= 0) {
+                        System.out.println("You have defeated the monster!!!1");
+                        MonsterOne.monsterOne();
+                        epilouge(name);
                         break;
                     }
 
@@ -88,7 +88,7 @@ public class BossFight {
                 } while (confirm);
             } else {
                 System.out.println(name + "I don't blame you for running, good luck back in the forest, you will need it to survive");
-                Main.main();
+                Main.main(name);
             }
         }
 

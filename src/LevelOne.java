@@ -31,17 +31,26 @@ public class LevelOne {
                 enemyHealth -= heroAttack;
                 System.out.println(name + ", Your attack dealt " + heroAttack + " damage, your enemys health is " + (enemyHealth + " however your enemy dealt " + enemyAttack + " damage to you, leaving you with " + (heroHealth)));
 
-                // setting up the end of the gaem(when the enemy dies)
-                if (enemyHealth <= 0) {
-                    System.out.println(name + ", You defeated the enemy! You continue on your quest");
+                // setting up the end of the gaem(when the hero dies)
+                if (heroHealth <= 0) {
+                    System.out.println(name + ", You died! game over!");
                     System.out.println();
-                    MonsterOne.monsterOne();
-                    break;
-                    // setting up the end of the game(when the hero dies)
-                } else if (heroHealth <= 0) {
-                    System.out.println(name + " You died! Game over!");
                     MonsterTwo.monsterTwo();
-                    Main.main();
+                    System.out.println("Play again?[y/n]");
+                    String response = scanner.nextLine();
+                    if(response.equalsIgnoreCase("y")) {
+                        Main.main(name);
+                    } else {
+                        System.out.println("Thanks for playing!");
+                        Main.main(name);
+                        break;
+                    }
+
+                    break;
+                    // setting up the end of the game(when the enemy dies)
+                } else if (enemyHealth <= 0) {
+                    System.out.println(name + " You defeated your enemy!!!");
+                    MonsterOne.monsterOne();
                     break;
                 }
 
@@ -63,7 +72,7 @@ public class LevelOne {
                     // run this code when the user inputs run after the attack
                 } else if (response.equalsIgnoreCase("run")) {
                     System.out.println(name + ", You are a huge coward!!!!");
-                    Main.main();
+                    Main.main(name);
                 }
 
                 // run this code if the user inputs attack OR potion
@@ -74,7 +83,7 @@ public class LevelOne {
             // run this if the user says n to attacking the enemy
         } else {
             System.out.println(name + ", You are a coward!!!!");
-            Main.main();
+            Main.main(name);
         }
 
     }

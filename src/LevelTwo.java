@@ -22,15 +22,23 @@ public class LevelTwo {
                 heroHealth -= enemyAttack;
                 newEnemyHealth -= heroAttack;
                 System.out.println("you attack! your attack dealt " + heroAttack + " damage to your enemy leaving him with " + newEnemyHealth + ", but his counter attack dealt " + enemyAttack + ", left you with " + heroHealth);
-                if (newEnemyHealth <= 0) {
-                    System.out.println("You defeated your enemy!");
+                if (heroHealth <= 0) {
+                    System.out.println("You died, game over!");
                     System.out.println("");
-                    MonsterOne.monsterOne();
-                    break;
-                } else if (heroHealth <= 0) {
-                    System.out.println("You died, game over");
                     MonsterTwo.monsterTwo();
-                    Main.main();
+                    System.out.println("Play again?[y/n]");
+                    String res = scanner.nextLine();
+                    if(res.equalsIgnoreCase("y")) {
+                        Main.main(name);
+                    } else {
+                        System.out.println("Thanks for playing!");
+                        Main.main(name);
+                        break;
+                    }
+                    break;
+                } else if (newEnemyHealth <= 0) {
+                    System.out.println("You defeated your enemy!");
+                    MonsterOne.monsterOne();
                     break;
                 }
                 System.out.println("Do you want to continue the attack, take a potion then attack, or run like a coward?[attack/potion/run]");
@@ -53,7 +61,7 @@ public class LevelTwo {
 
         } else {
             System.out.println(name + " You are a coward for running! you could beat your enemy!!!");
-            Main.main();
+            Main.main(name);
         }
     }
 }
