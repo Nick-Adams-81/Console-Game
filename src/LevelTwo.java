@@ -2,9 +2,6 @@ import java.util.Scanner;
 
 public class LevelTwo {
 
-    public static int randomInt(int Min, int Max) {
-        return (int) (Math.random() * (Max - Min)) + Min;
-    }
 
     public static void levelTwo(String name, int heroHealth, int enemyHealth) {
         Scanner scanner = new Scanner(System.in);
@@ -19,8 +16,8 @@ public class LevelTwo {
             System.out.println(name + ", Your health is now: " + newHeroHealth + ", and you now have " + potions + " potions, however your new enemy is much tougher, there health is: " + newEnemyHealth + ".");
             do {
                 // using randomInt function to generate random hit points for hero and enemy when the user attacks
-                int heroAttack = randomInt(7, 60);
-                int enemyAttack = randomInt(20, 50);
+                int heroAttack = RandomInt.randomInt(7, 60);
+                int enemyAttack = RandomInt.randomInt(20, 50);
                 // re setting hero and enemy health
 
                 System.out.println("");

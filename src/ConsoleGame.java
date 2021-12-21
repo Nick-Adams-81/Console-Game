@@ -3,15 +3,6 @@ import java.util.Scanner;
 
 public class ConsoleGame {
 
-    // function generating a random number in a given range
-//    public static int randomInt(int Min, int Max) {
-//        return (int) (Math.random() * (Max - Min)) + Min;
-//    }
-
-
-
-
-
     public static void main(String[] args) {
         boolean confirmation;
         // initializing a scanner to capture user input

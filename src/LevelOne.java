@@ -2,9 +2,6 @@ import java.util.Scanner;
 
 public class LevelOne {
 
-    public static int randomInt(int Min, int Max) {
-        return (int) (Math.random() * (Max - Min)) + Min;
-    }
 
     public static void levelOne(String name, int heroHealth, int enemyHealth) {
 
@@ -29,8 +26,8 @@ public class LevelOne {
             do {
 
                 // using randomInt function to generate random hit points for hero and enemy when the user attacks
-                int heroAttack = randomInt(5, 50);
-                int enemyAttack = randomInt(15, 40);
+                int heroAttack = RandomInt.randomInt(5, 50);
+                int enemyAttack = RandomInt.randomInt(15, 40);
 
                 // adjusting the health points of hero and enemy after the attack happens
                 heroHealth -= enemyAttack;

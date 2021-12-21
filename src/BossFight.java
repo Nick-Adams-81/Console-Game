@@ -2,9 +2,7 @@ import java.util.Scanner;
 
 public class BossFight {
 
-    public static int randomInt(int Min, int Max) {
-        return (int) (Math.random() * (Max - Min)) + Min;
-    }
+
 
     public static void epilouge(String name) {
         System.out.println(name + ", You have survived your journey, you are a powerful warrior, congratulations!");
@@ -40,8 +38,8 @@ public class BossFight {
                 do {
 
                     // using the random int method to get random attack points for the hero and the enemy
-                    int heroAttack = randomInt(20, 90);
-                    int enemyAttack = randomInt(30, 60);
+                    int heroAttack = RandomInt.randomInt(20, 90);
+                    int enemyAttack = RandomInt.randomInt(30, 60);
 
                     // adjusting the hero and enemy health after an attack
                     heroHealth -= enemyAttack;
