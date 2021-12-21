@@ -41,7 +41,7 @@ public class ConsoleGame {
                 // calling the void level methods
                 LevelOne.levelOne(name, heroHealth, enemyHealth);
                 LevelTwo.levelTwo(name, newHeroHealth, newEnemyHealth);
-                BossFight.bossFight(name, heroHealth, enemyHealth);y
+                BossFight.bossFight(name, heroHealth, enemyHealth);
 
 
                 // asking the user if they want to play again
