@@ -19,9 +19,6 @@ public class LevelOne {
             // initializing a boolean to run our do while loop
             boolean attack;
 
-//            // initial potions
-//            int potions = 2;
-
             // running the game code in a do while loop
             do {
 
@@ -44,6 +41,7 @@ public class LevelOne {
                 } else if (heroHealth <= 0) {
                     System.out.println(name + " You died! Game over!");
                     MonsterTwo.monsterTwo();
+                    Main.main();
                     break;
                 }
 
@@ -56,7 +54,7 @@ public class LevelOne {
                     if (potions > 0) {
                         heroHealth += 10;
                         potions -= 1;
-                        System.out.println("You took the potion, your health is now " + (heroHealth) + ", you have " + potions + " potions left");
+                        System.out.println("You took the potion, your health is now " + heroHealth + ", you have " + potions + " potions left");
                         System.out.println("");
                     } else if (potions == 0) {
                         System.out.println("You have no more potions left! No health will be added!");
@@ -65,6 +63,7 @@ public class LevelOne {
                     // run this code when the user inputs run after the attack
                 } else if (response.equalsIgnoreCase("run")) {
                     System.out.println(name + ", You are a huge coward!!!!");
+                    Main.main();
                 }
 
                 // run this code if the user inputs attack OR potion
@@ -75,6 +74,7 @@ public class LevelOne {
             // run this if the user says n to attacking the enemy
         } else {
             System.out.println(name + ", You are a coward!!!!");
+            Main.main();
         }
 
     }

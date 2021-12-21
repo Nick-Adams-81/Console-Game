@@ -9,10 +9,10 @@ public class BossFight {
 
     }
 
-    public static void bossFight(String name, int heroHealth2, int enemyHealth2) {
+    public static void bossFight(String name, int heroHealth) {
 
         // setting up boss fight hero and boss health
-        int heroHealth = 200;
+        heroHealth += 50;
         int enemyHealth = 350;
 
         // setting up a scanner for user input in boss fight
@@ -57,6 +57,7 @@ public class BossFight {
                     } else if (heroHealth <= 0) {
                         System.out.println("You have perished on your quest, a brave effort but all for naught...");
                         MonsterTwo.monsterTwo();
+                        Main.main();
                         break;
                     }
 
@@ -87,6 +88,7 @@ public class BossFight {
                 } while (confirm);
             } else {
                 System.out.println(name + "I don't blame you for running, good luck back in the forest, you will need it to survive");
+                Main.main();
             }
         }
 
