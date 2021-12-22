@@ -24,7 +24,7 @@ public class LevelOne {
 
                 // using randomInt function to generate random hit points for hero and enemy when the user attacks
                 int heroAttack = RandomInt.randomInt(5, 50);
-                int enemyAttack = RandomInt.randomInt(15, 40);
+                int enemyAttack = RandomInt.randomInt(35, 40);
 
                 // adjusting the health points of hero and enemy after the attack happens
                 heroHealth -= enemyAttack;
@@ -36,13 +36,13 @@ public class LevelOne {
                     System.out.println(name + ", You died! game over!");
                     System.out.println();
                     MonsterTwo.monsterTwo();
+
                     System.out.println("Play again?[y/n]");
-                    String response = scanner.nextLine();
-                    if(response.equalsIgnoreCase("y")) {
+                    String res = scanner.nextLine();
+                    if (res.equalsIgnoreCase("y")) {
                         Main.main(name);
+
                     } else {
-                        System.out.println("Thanks for playing!");
-                        Main.main(name);
                         break;
                     }
 

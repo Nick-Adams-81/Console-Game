@@ -7,11 +7,6 @@ public class Main {
         // initializing a scanner to capture user input
         Scanner scanner = new Scanner(System.in);
 
-//        // asking the user for their name
-//        System.out.println("Tell me your name");
-//        String name = scanner.nextLine();
-//        System.out.println("Hello " + name + ", nice to meet you!");
-
         do {
 
             // setting up the hero and first enemy health
