@@ -41,7 +41,7 @@ public class LevelOne {
 
                 } else if (enemyHealth <= 0) {
                     System.out.println(name + " You defeated your enemy!!!");
-                    MonsterOne.monsterOne();
+                    MonsterThree.monsterThree();
                     break;
                 }
 
