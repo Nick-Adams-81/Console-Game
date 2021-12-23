@@ -50,7 +50,7 @@ public class BossFight {
                     if (heroHealth <= 0) {
                         System.out.println("You have perished on your quest, a brave effort but all for naught...");
                         MonsterTwo.monsterTwo();
-                        Main.main(name);
+                        Main.main();
                         break;
 
                         // run this if the heros health is 0 or less
@@ -88,7 +88,7 @@ public class BossFight {
                 } while (confirm);
             } else {
                 System.out.println(name + "I don't blame you for running, good luck back in the forest, you will need it to survive");
-                Main.main(name);
+                Main.main();
             }
         }
 

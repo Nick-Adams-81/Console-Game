@@ -24,7 +24,7 @@ public class LevelOne {
 
                 // using randomInt function to generate random hit points for hero and enemy when the user attacks
                 int heroAttack = RandomInt.randomInt(5, 50);
-                int enemyAttack = RandomInt.randomInt(35, 40);
+                int enemyAttack = RandomInt.randomInt(15, 40);
 
                 // adjusting the health points of hero and enemy after the attack happens
                 heroHealth -= enemyAttack;
@@ -36,18 +36,9 @@ public class LevelOne {
                     System.out.println(name + ", You died! game over!");
                     System.out.println();
                     MonsterTwo.monsterTwo();
-
-                    System.out.println("Play again?[y/n]");
-                    String res = scanner.nextLine();
-                    if (res.equalsIgnoreCase("y")) {
-                        Main.main(name);
-
-                    } else {
-                        break;
-                    }
-
+                    Main.main();
                     break;
-                    // setting up the end of the game(when the enemy dies)
+
                 } else if (enemyHealth <= 0) {
                     System.out.println(name + " You defeated your enemy!!!");
                     MonsterOne.monsterOne();
@@ -72,7 +63,7 @@ public class LevelOne {
                     // run this code when the user inputs run after the attack
                 } else if (response.equalsIgnoreCase("run")) {
                     System.out.println(name + ", You are a huge coward!!!!");
-                    Main.main(name);
+                    Main.main();
                 }
 
                 // run this code if the user inputs attack OR potion
@@ -83,7 +74,7 @@ public class LevelOne {
             // run this if the user says n to attacking the enemy
         } else {
             System.out.println(name + ", You are a coward!!!!");
-            Main.main(name);
+            Main.main();
         }
 
     }

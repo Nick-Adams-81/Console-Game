@@ -29,10 +29,10 @@ public class LevelTwo {
                     System.out.println("Play again?[y/n]");
                     String res = scanner.nextLine();
                     if(res.equalsIgnoreCase("y")) {
-                        Main.main(name);
+                        Main.main();
                     } else {
                         System.out.println("Thanks for playing!");
-                        Main.main(name);
+                        Main.main();
                         break;
                     }
                     break;
@@ -61,7 +61,7 @@ public class LevelTwo {
 
         } else {
             System.out.println(name + " You are a coward for running! you could beat your enemy!!!");
-            Main.main(name);
+            Main.main();
         }
     }
 }
