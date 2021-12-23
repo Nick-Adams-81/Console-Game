@@ -26,16 +26,7 @@ public class LevelTwo {
                     System.out.println("You died, game over!");
                     System.out.println("");
                     MonsterTwo.monsterTwo();
-                    System.out.println("Play again?[y/n]");
-                    String res = scanner.nextLine();
-                    if(res.equalsIgnoreCase("y")) {
-                        Main.main();
-                    } else {
-                        System.out.println("Thanks for playing!");
-                        Main.main();
-                        break;
-                    }
-                    break;
+                    Main.main();
                 } else if (newEnemyHealth <= 0) {
                     System.out.println("You defeated your enemy!");
                     MonsterOne.monsterOne();
