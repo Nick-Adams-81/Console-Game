@@ -56,7 +56,7 @@ public class BossFight {
                         // run this if the heros health is 0 or less
                     } else if (enemyHealth <= 0) {
                         System.out.println("You have defeated the monster!!!");
-                        MonsterOne.monsterOne();
+                        MonsterFour.monsterFour();
                         epilouge(name);
                         break;
                     }
