@@ -9,6 +9,12 @@ public class Epilouge {
         System.out.println("Kenneth Howell");
         System.out.println("Douglas Hirsch");
         System.out.println("Larry Castillo");
+        System.out.println("");
+        System.out.println("Special mentions for motivation to finish this game:");
+        System.out.println("Mary White");
+        System.out.println("Rhiannon Hayes");
+        System.out.println("Jackie Dallas");
+        System.out.println("Ian McConihay");
 
     }
 }
