@@ -32,9 +32,12 @@ public class LevelTwo {
                     MonsterOne.monsterOne();
                     break;
                 }
-                System.out.println("Do you want to continue the attack, take a potion then attack, or run like a coward?[attack/potion/run]");
+                System.out.println("Do you want to continue the attack, take a potion then attack, or run like a coward??");
+                System.out.println("1: attack");
+                System.out.println("2: potion");
+                System.out.println("3: run");
                 String res = scanner.nextLine();
-                if (res.equalsIgnoreCase("potion")) {
+                if (res.equalsIgnoreCase("2")) {
                     if (potions > 0) {
                         heroHealth += 20;
                         potions -= 1;
@@ -43,10 +46,10 @@ public class LevelTwo {
                         System.out.println("You have no potions left! No health will be added!");
                     }
 
-                } else if (res.equalsIgnoreCase("run")) {
+                } else if (res.equalsIgnoreCase("3")) {
                     System.out.println(name + ", Run away you coward!!!");
                 }
-                confirm = res.equalsIgnoreCase("attack") || res.equalsIgnoreCase("potion");
+                confirm = res.equalsIgnoreCase("1") || res.equalsIgnoreCase("2");
 
             } while (confirm);
 
