@@ -62,11 +62,14 @@ public class BossFight {
                     }
 
                     // ask the user if they want to continue the fight, take a potion and continue the fight, or run away
-                    System.out.println("Continue the fight, take a potion and continue the fight, or run away?[fight/potion/run]");
+                    System.out.println("Continue the fight, take a potion and continue the fight, or run away?");
+                    System.out.println("1: attack");
+                    System.out.println("2: potion");
+                    System.out.println("3: run");
                     String response2 = scanner.nextLine();
 
                     // run this if the user input is potion
-                    if (response2.equalsIgnoreCase("potion")) {
+                    if (response2.equalsIgnoreCase("2")) {
                         if (potions > 0) {
                             heroHealth += 50;
                             potions -= 1;
@@ -84,7 +87,7 @@ public class BossFight {
                     }
 
                     // setting the confirm boolean based on user input
-                    confirm = response2.equalsIgnoreCase("fight") || response2.equalsIgnoreCase("potion");
+                    confirm = response2.equalsIgnoreCase("1") || response2.equalsIgnoreCase("2");
                 } while (confirm);
             } else {
                 System.out.println(name + "I don't blame you for running, good luck back in the forest, you will need it to survive");
