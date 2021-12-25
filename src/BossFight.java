@@ -4,10 +4,7 @@ public class BossFight {
 
 
 
-    public static void epilouge(String name) {
-        System.out.println(name + ", You have survived your journey, you are a powerful warrior, congratulations!");
 
-    }
 
     public static void bossFight(String name, int heroHealth) {
 
@@ -57,7 +54,7 @@ public class BossFight {
                     } else if (enemyHealth <= 0) {
                         System.out.println("You have defeated the monster!!!");
                         MonsterFour.monsterFour();
-                        epilouge(name);
+                        Epilouge.epilouge(name);
                         break;
                     }
 
