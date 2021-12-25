@@ -46,11 +46,14 @@ public class LevelOne {
                 }
 
                 // asking the user if they want to attack, take a potion, or run after each attack
-                System.out.println(name + ", Do you wish to continue the attack, take a potion then attack, or run away?? [attack/potion/run]");
+                System.out.println(name + ", Do you wish to continue the attack, take a potion then attack, or run away??");
+                System.out.println("1: attack");
+                System.out.println("2: potion");
+                System.out.println("3: run");
                 String response = scanner.nextLine();
 
                 // run this code if the user inputs potion
-                if (response.equalsIgnoreCase("potion")) {
+                if (response.equalsIgnoreCase("2")) {
                     if (potions > 0) {
                         heroHealth += 10;
                         potions -= 1;
@@ -61,13 +64,13 @@ public class LevelOne {
                     }
 
                     // run this code when the user inputs run after the attack
-                } else if (response.equalsIgnoreCase("run")) {
+                } else if (response.equalsIgnoreCase("3")) {
                     System.out.println(name + ", You are a huge coward!!!!");
                     Main.main();
                 }
 
                 // run this code if the user inputs attack OR potion
-                attack = response.equalsIgnoreCase("attack") || response.equalsIgnoreCase("potion");
+                attack = response.equalsIgnoreCase("1") || response.equalsIgnoreCase("2");
 
             } while (attack);
 
