@@ -15,6 +15,7 @@ public class Epilouge {
         System.out.println("Rhiannon Hayes");
         System.out.println("Jackie Dallas");
         System.out.println("Ian McConihay");
+        System.out.println("Thanks for playing!!!");
 
     }
 }
